@@ -12,6 +12,15 @@ Permissive REST API for information access control from a retail business enviro
    * SSH:  `git clone git@github.com:DevVillageNortheast/e-stock-core.git`
    * HTTP: `git clone https://github.com/DevVillageNortheast/e-stock-core.git`
 
-4. Configure the Database
+4. **Configure the Database**
    * Create a .env file on `src/main/resource/.env`
-   * Add this line to the file `DATABASE_CONFIG_DIRECTORY=/path/to/the/file.txt`
+   * Create a txt file on any directory out of the project
+   * On this file insert the database configuration, like in this example
+        ```
+        org.mariadb.jdbc.Driver
+        jdbc:mariadb://localhost:3306/yourdatabase
+        username
+        password
+        org.hibernate.dialect.MariaDB53Dialect
+        ```
+   * Point the txt file by adding this line on the .env `DATABASE_CONFIG_DIRECTORY=/path/to/the/file.txt`
